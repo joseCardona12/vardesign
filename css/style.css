@@ -1,0 +1,1460 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+:root{
+    --color-text-primary: #1d1d1d;
+    --color-text-secundary: #b27fb4;
+    --background-color-terca: #bfa4c0;
+    --background-color-primary: #1d1d1d;
+    --background-color-secundary: #b27fb4;
+    --color-border--primary:#1d1d1d;
+    --color-border--secundary: #b27fb4;
+}
+
+html{
+    scroll-behavior: smooth;
+
+
+}
+
+body{
+    font-family: 'touche', sans-serif;
+    overflow-x: hidden;
+
+    
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4em;
+
+}
+
+.logo img{
+
+    width: 250px;
+}
+
+.hamburger{
+    display: none;
+}
+
+.nav-bar ul{
+    display: flex;
+}
+
+.nav-bar ul li{
+    list-style: none;
+    padding: 1em ;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition: color 300ms;
+}
+
+.nav-bar ul li a:hover{
+    color: var(--color-text-secundary);
+}
+
+
+/* Main ------------------------------------------------->*/
+
+main{
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0px auto;
+    overflow-x: hidden;
+
+}
+
+
+
+/* Content - Principal ------------------>*/
+
+.content__first{
+    padding: 0px 6em;
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+}
+
+.container__left{
+    height: 250px;
+    margin: auto;
+
+}
+
+.container__title h2{
+    font-size: 4em;
+    line-height: 1em;
+}
+
+.container__paragraph{
+    margin-bottom: 2em;
+}
+.container__button a{
+    padding: 1em;
+    background-color: var(--background-color-primary);
+    border-radius: 1em;
+    color: var(--color-text-secundary);
+    text-decoration: none;
+    transition: background-color 300ms;
+}
+
+.container__button a:hover{
+    color: var(--color-text-primary);
+    background-color: transparent;
+    border: 2px solid var(--color-border--secundary);
+}
+
+.container__right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.container__right .container__img img{
+    width: 500px;
+}
+
+
+/* Content -- secundaria -------------------->*/
+
+.content__services{
+    background-color: var(--background-color-primary);
+    height: auto;
+    padding: 3em 6em;
+    color: var(--color-text-secundary);
+}
+
+.container__title .title{
+    display: grid;
+    grid-template-columns: 20% 80%;
+
+}
+
+.title h3{
+    font-size: 2em;
+}
+
+.title .linea{
+    border-bottom: 1px solid var(--color-border--secundary);
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.container__grid-text{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__left-services{
+    display: grid;
+    height: 120px;
+    margin: auto;
+    grid-template-columns: 50% 50%;
+    gap: 2em;
+}
+
+.content__text-left .title__services h4,
+.content__text-right .title__services h4{
+    font-size: 1.2em;
+
+}
+.container__right-services{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container__right-services .container__img img{
+    width: 500px;
+    transition: transform 300ms;
+
+}
+
+.container__right-services .container__img img:hover{
+    transform: scale(1.06);
+}
+
+/* Content three ------------------> content __user*/
+
+.content__user{
+    width: 100%;
+    height: auto;
+    padding: 2em 6em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__left-user{
+    display: flex;
+    align-items: center;
+}
+
+
+.container__right-user{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container__right-user .container__img-user img{
+    width: 400px;
+    transition: transform 300ms;
+}
+
+.container__right-user .container__img-user img:hover{
+    transform: scale(1.06);
+}
+
+/* Content four -------------> content trabajo PIA---->*/
+.content__trabajo-pia{
+    width: 100%;
+    height: auto;
+    background-color: var(--background-color-primary);
+    padding: 2em 6em;
+    color:var(--color-text-secundary);
+}
+
+.container__carrusel-title{
+    margin-top: 4em;
+}
+
+.container__carrusel-title h5{
+    font-size: 1.2em;
+}
+
+.carrusel{
+    width: 80%;
+    max-width: 120rem;
+    background-color: var(--background-color-secundary);
+    border-radius: 1em;
+    margin: 5rem auto;
+    overflow: hidden;
+    background-color: var(--background-color-primary);
+
+}
+
+.carrusel .grande{
+    width: 800%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+    transform: translateX(0%);
+    transition: transform .5s ease;
+
+}
+
+.carrusel .img{
+    width: calc(100% / 8);
+    height: 30rem;
+    object-fit: cover;
+    margin-right: 2rem;
+    border-radius: 6px;
+    background-color: var(--background-color-secundary);
+}
+
+.carrusel .puntos{
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel .punto{
+    width: 1em;
+    height: 1em;
+    list-style: none;
+    border: 1px solid var(--color-border--secundary);
+    border-radius: 50px;
+    margin: 1em;
+    cursor: pointer;
+}
+
+.carrusel .punto.active{
+    background-color: var(--background-color-secundary);
+}
+
+/* Content five ---------------------> content__sobre-nosotros*/
+
+.content__sobre-nosotros{
+    width: 100%;
+    padding: 2em 6em;
+}
+
+.container__title-nosotros .title{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.container__sobre-nosotros-grid{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.container__left-sobreNosotros{
+    height: 50px;
+    margin: auto;
+}
+
+
+.container__right-sobreNosotros{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container__right-sobreNosotros img{
+    width: 500px;
+    transition: transform 300ms;
+
+}
+
+.container__right-sobreNosotros img:hover{
+    transform: scale(1.06);
+}
+
+
+.container__qrs{
+    display: flex;
+    justify-content: center;
+}
+
+.container__qrs img{
+    width: 60%;
+}
+
+/* Content six -------------------> content__contactanos---*/
+
+.content__contactanos{
+    width: 100%;
+    background-color: var(--background-color-primary);
+    padding: 2em 6em;
+    height: auto;
+}
+
+.container__title .title{
+    color: var(--color-text-secundary);
+}
+
+
+.formulario{
+    width: 60%;
+    margin: 4em auto;
+}
+
+.formulario form{
+    width: 80%;
+    margin: 0px auto;
+    color: var(--color-text-secundary);
+
+}
+
+.group__nombre label,
+.group__correo label,
+.group__mensaje label{
+    display: block;
+    margin-bottom: 1em;
+}
+
+.group__nombre input,
+.group__correo input,
+.group__mensaje textarea{
+    border: 1px solid var(--color-border--secundary);
+    border-radius: 1em;
+    padding: 1em;
+    width: 100%;
+    background-color: transparent;
+    color: var(--color-text-secundary);
+    outline: none;
+    margin-bottom: 1.5em;
+}
+
+.group__nombre input::placeholder,
+.group__correo input::placeholder{
+    color: #b27fb4;
+    font-family: 'touche', sans-serif;
+    font-size: 12px;
+}
+
+.group__button{
+    width: 100%;
+}
+
+.group__button button{
+    width: 100%;
+    border-radius: 1em;
+    padding: 1em;
+    color: var(--color-text-primary);
+    background-color: var(--background-color-secundary);
+    border: none;
+    font-family: 'touche', sans-serif;
+    cursor: pointer;
+    transition: background-color 300ms;
+    border: 1px solid var(--color-border--secundary);
+}
+
+.group__button button:hover{
+    color: var(--color-text-secundary);
+
+    background-color: transparent;
+}
+
+
+/* Content seven ---------------------------> content__disenoIntuitivo--> */
+
+.content__disenoIntuitivo{
+
+    width: 100%;
+    height: auto;
+    padding: 4em 6em;
+}
+
+.container__text{
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.container__text h5{
+    font-size: 1.6em;
+}
+
+/*Content eight ------------------> content__footer--------------> */
+
+.content__footer{
+    background-color: var(--background-color-primary);
+    width: 100%;
+    padding: 2em 6em;
+    overflow-x: hidden;
+}
+
+.container__footer{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+
+.logo__footer{
+    margin-bottom: 1em;
+}
+
+.logo__footer img{
+    width: 200px;
+}
+
+.container__information{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin-bottom: 4em;
+    
+}
+
+.content__left-redondar .redondar{
+    width: 1em;
+    height: 1em;
+    border-radius: 50px;
+    background-color: var(--background-color-secundary);
+    margin-bottom: .4em;
+}
+
+.content__righy-information p{
+    color: var(--color-text-secundary);
+    margin-bottom: .1em;
+}
+
+.container__copy p{
+    color: var(--color-text-secundary);
+    font-size: 13px;
+}
+
+
+
+.nav-bar-footer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.nav-bar-footer ul{
+    display: flex;
+}
+
+.nav-bar-footer ul li{
+    list-style: none;
+    padding: 1em;
+}
+
+.nav-bar-footer ul li a{
+    text-decoration: none;
+    color: var(--color-text-secundary);
+}
+
+.content__redes{
+    display: grid;
+    place-items: end;
+}
+
+
+.content__right-redondar {
+    margin-bottom: 2em;
+    position: relative;
+    margin-right: 90px;
+    display: flex;
+}
+
+
+.content__right-redondar .redondar{
+    margin-left: .3rem;
+    width: 1em;
+    height: 1em;
+    border-radius: 50px;
+    background-color: var(--background-color-secundary);
+}
+
+.content__right-information p{
+    color: var(--color-text-secundary);
+}
+
+.content__right-information p a{
+    text-decoration: none;
+    color: var(--color-text-secundary);
+}
+
+.icono__subir{
+    background-color: var(--background-color-secundary);
+    display: inline-block;
+    border-radius: 10px;
+    padding: .5em;
+    margin-top: 1em;
+    margin-left: 8em;
+}
+
+.icono__subir img{
+    width: 20px;
+}
+
+@media (max-width:1100px){
+    header{
+        padding: 0px 1em;
+    }
+
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        margin: 6px 0px;
+        background-color: var(--background-color-primary);
+    }
+
+    .nav-bar{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: var(--background-color-primary);
+        width: 100%;
+        height: 0%;
+        box-shadow: 0px 1px 5px #000000;
+        border-radius: 1em;
+        padding: 2em;
+        z-index: 100;
+        opacity: 0;
+        transition: height 500ms;
+
+
+
+    }
+
+    .nav-bar.activo{
+        opacity: 1;
+        height: 87%;
+
+    }
+
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        opacity: 0;
+
+    }
+
+    .nav-bar.activo ul{
+        opacity: 1;
+    }
+
+    .nav-bar ul li{
+        margin-bottom: .7em;
+    }
+
+
+    .nav-bar ul li a{
+        color: var(--color-text-secundary);
+    }
+
+    .nav-bar ul li a:hover{
+        color: var(--background-color-terca);
+    }
+
+
+    /* Content - Principal ------------------>*/
+
+    .content__first{
+        padding: 0px 4em;
+        gap: 2em;
+
+    }
+
+    .container__left{
+        height: 280px;
+    
+    }
+
+    /* Content -- secundaria -------------------->*/
+
+    .content__services{
+        padding: 3em 4em;
+    }
+
+    .container__title .title{
+        grid-template-columns: 25% 75%;
+
+    }
+
+    .container__grid-text{
+        grid-template-columns: 40% 60%;
+        gap: 2em;
+    }
+
+    /* Content four -------------> content trabajo PIA---->*/
+
+    .content__trabajo-pia {
+        padding: 3em 4em;
+    }
+
+    .content__trabajo-pia .container__title .title{
+        grid-template-columns: 30% 70%;
+    }
+
+
+    .carrusel .img{
+        margin-right: 0;
+    }
+
+    /* Content five ---------------------> content__sobre-nosotros*/
+
+    .content__sobre-nosotros{
+        padding: 2em 4em;
+    }
+
+    .container__title-nosotros .title{
+        grid-template-columns: 40% 60%;
+    }
+
+    .container__sobre-nosotros-grid{
+        margin-top: 2em;
+        grid-template-columns: 40% 60%;
+        gap: 1em;
+    }
+
+    .container__right-sobreNosotros img{
+        width: 400px;
+
+    }
+
+
+    .container__qrs img{
+        width: 70%;
+    }
+
+    /* Content six -------------------> content__contactanos---*/
+
+    .content__contactanos{
+
+        padding: 2em 4em;
+    }
+
+    .container__title .title{
+        grid-template-columns: 30% 70%;
+    }
+
+    /*Content eight ------------------> content__footer--------------> */
+
+    .content__footer{
+        padding: 2em 4em;
+    }
+
+    .logo__footer img{
+        width: 150px;
+    }
+
+    .content__righy-information p{
+        margin-bottom: .4em;
+        font-size: 14px;
+    }
+
+    .container__copy p{
+        font-size: 12px;
+    }
+
+    .nav-bar-footer ul li{
+        padding: .6em;
+    }
+
+    .nav-bar-footer ul li a{
+        font-size: 13px;
+    }
+
+    .content__right-redondar {
+        margin-right: 104px;
+
+    }
+
+    .content__right-information p{
+        color: var(--color-text-secundary);
+    }
+
+    .content__right-information p a{
+        font-size: 14px;
+    }
+
+    .icono__subir{
+        background-color: var(--background-color-secundary);
+        display: inline-block;
+        border-radius: 10px;
+        padding: .5em;
+        margin-top: 1em;
+        margin-left: 8em;
+    }
+
+}
+
+@media (max-width: 920px){
+
+    /* Content - Principal ------------------>*/
+
+    .content__first{
+        padding: 6em 4em;
+        grid-template-columns: 100%;
+
+    }
+
+    .container__left{
+        width: 75%;
+        height: 210px;
+        margin-bottom: 0;
+
+    }
+
+    .container__title h2{
+        font-size: 3em;
+        margin-bottom: .4em;
+
+    }
+
+    .container__paragraph{
+        margin-bottom: 2.5em;
+    }
+
+    .container__right{
+        justify-content: center;
+    }
+
+    .container__right .container__img img{
+        transition: transform 300ms;
+    }
+
+    .container__right .container__img img:hover{
+        transform: scale(1.06);
+    }
+
+    /* Content -- secundaria -------------------->*/
+
+    .content__services{
+        padding: 3em 4em;
+    }
+
+    .container__title .title{
+        grid-template-columns: 30% 70%;
+    }
+
+
+    .container__grid-text{
+        display: grid;
+        grid-template-columns: 100%;
+        margin-top: 5em;
+    }
+
+    .container__right-services{
+        justify-content: center;
+    }
+
+    .container__right-services .container__img img{
+        width: 600px;
+
+    }
+
+    /* Content three ------------------> content __user*/
+
+    .content__user{
+        padding: 2em 4em;
+        grid-template-columns: 40% 60%;
+    }
+
+    .container__right-user{
+        width: 100%;
+        margin-left: 80px;
+    }
+
+    .container__img-user img{
+        position: relative;
+        margin-left: 20px;
+    }
+    /* Content four -------------> content trabajo PIA---->*/
+    .content__trabajo-pia {
+        padding: 3em 4em;
+    }
+
+    .content__trabajo-pia .container__title .title{
+        grid-template-columns: 35% 65%;
+    }
+
+    .carrusel .img{
+        margin-right: 0rem;
+    }
+
+    /* Content five ---------------------> content__sobre-nosotros*/
+
+    .content__sobre-nosotros{
+        padding: 2em 4em;
+    }
+
+    .container__title-nosotros .title{
+        grid-template-columns: 45% 55%;
+    }
+
+    .container__sobre-nosotros-grid{
+        grid-template-columns: 100%;
+    }
+
+    .container__left-sobreNosotros{
+        text-align: center;
+        margin: auto;
+        margin-top: 5em;
+        width: 60%;
+    }
+
+    .container__right-sobreNosotros{
+        justify-content: center;
+    }
+
+    .container__right-sobreNosotros img{
+        width: 400px;
+
+    }
+
+    .container__qrs img{
+        width: 70%;
+    }
+
+    /* Content six -------------------> content__contactanos---*/
+
+    .content__contactanos{
+        padding: 2em 4em;
+    }
+
+    .container__title .title{
+        grid-template-columns: 40% 60%;
+    }
+
+    .formulario{
+        width: 70%;
+    }
+
+    
+    /*Content eight ------------------> content__footer--------------> */
+
+    .content__footer{
+        padding: 2em 4em;
+    }
+
+    .logo__footer{
+        margin-bottom: 1em;
+    }
+
+    .logo__footer img{
+        width: 150px;
+    }
+
+    .container__information{
+        margin-bottom: 4em; 
+    }
+
+    .content__left-redondar .redondar{
+        margin-bottom: .1em;
+    }
+
+    .nav-bar-footer ul li{
+        padding: .6em;
+    }
+
+    .content__right-redondar {
+        margin-right: 105px;
+    }
+
+}
+
+
+@media (max-width: 820px){
+    
+    /*Content eight ------------------> content__footer--------------> */
+
+    .content__footer{
+        padding: 2em 2em;
+    }
+    .container__information{
+        margin-bottom: 4em;  
+        gap:.4em;
+    }
+
+    .nav-bar-footer{
+        margin-bottom: 1em;
+    }
+
+    .nav-bar-footer ul li{
+        padding: .2em;
+    }
+
+
+}
+
+@media (max-width: 720px){
+
+    
+    /* Content four -------------> content trabajo PIA---->*/
+    .content__trabajo-pia .container__title .title{
+        grid-template-columns: 40% 60%;
+    }
+
+    .carrusel{
+        width: 100%;
+    }
+
+
+    /* Content five ---------------------> content__sobre-nosotros*/
+
+    .container__title-nosotros .title{
+        grid-template-columns: 50% 50%;
+    }
+
+    .container__qrs img{
+        width: 80%;
+    }
+
+    /* Content six -------------------> content__contactanos---*/
+
+    .container__title .title{
+        grid-template-columns: 45% 55%;
+    }
+
+    .formulario{
+        width: 90%;
+    }
+
+    
+    /*Content eight ------------------> content__footer--------------> */
+
+    .content__footer{
+        padding: 2em 2em;
+    }
+
+    .nav-bar-footer ul li{
+        padding: .2em;
+    }
+
+
+}
+
+@media (max-width: 620px){
+
+    /* Content four -------------> content trabajo PIA---->*/
+
+    .content__trabajo-pia .container__title .title{
+        grid-template-columns: 45% 55%;
+    }
+
+    /* Content five ---------------------> content__sobre-nosotros*/
+
+
+    .container__title-nosotros .title{
+        grid-template-columns: 60% 40%;
+    }
+
+    .container__left-sobreNosotros{
+        margin-top: 3em;
+    }
+
+    .container__qrs img{
+        width: 90%;
+    }
+
+    /* Content six -------------------> content__contactanos---*/
+
+    .container__title .title{
+        grid-template-columns: 55% 45%;
+    }
+
+    .formulario{
+        width: 90%;
+    }
+
+    
+    /*Content eight ------------------> content__footer--------------> */
+
+    .content__footer{
+        padding: 2em 2em;
+    }
+
+    .logo__footer img{
+        width: 130px;
+    }
+
+    .container__information{
+        margin-bottom: 6em; 
+    }
+
+    .nav-bar-footer{
+        padding-right: 60px;
+    }
+
+    .nav-bar-footer ul{
+        display: block;
+        width: fit-content;
+    }
+
+}
+
+
+@media (max-width: 520px){
+
+
+    /* Content - Principal ------------------>*/
+
+    .content__first{
+        height: auto;
+    }
+
+    .container__left{
+        margin-bottom: 4em;
+    }
+   
+    .container__right .container__img img{
+        width: 350px;
+    }
+
+    /* Content -- secundaria -------------------->*/
+
+    .content__services{
+        height: auto;
+    }
+
+    .container__title .title{
+        grid-template-columns: 100%;
+    }
+
+    .title .linea{
+        display: none;
+    }
+
+    .container__left-services{
+        grid-template-columns: 100%;
+        margin-bottom: 5em;
+    }
+
+    .container__right-services .container__img img{
+        width: 450px;
+        margin-left: -20px;
+
+    }
+
+    /* Content three ------------------> content __user*/
+
+    .content__user{
+        padding: 6em 4em;
+        grid-template-columns: 100%;
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .container__right-user{
+        width: 100%;
+        margin-left: 80px;
+        margin-top: 1em;
+    }
+
+    /* Content four -------------> content trabajo PIA---->*/
+    .content__trabajo-pia {
+        padding: 3em 4em;
+    }
+
+    .content__trabajo-pia .container__title .title{
+        grid-template-columns: 100%;
+    }
+
+    .carrusel .img{
+        margin-right: 0rem;
+    }
+
+    .carrusel .puntos{
+        margin-top: 2em;
+    }
+
+    .carrusel .punto{
+        margin: 0;
+        margin-right: .3em;
+    }
+
+    /* Content five ---------------------> content__sobre-nosotros*/
+
+
+    .container__title-nosotros .title{
+        grid-template-columns: 100%;
+    }
+
+    .container__sobre-nosotros-grid{
+        grid-template-columns: 100%;
+    }
+
+    .container__left-sobreNosotros{
+        text-align:start;
+        margin: auto;
+        margin-top: 3em;
+        margin-bottom: 3em;
+        width: 60%;
+        height: auto;
+        margin-left: -3px;
+    }
+
+    .container__right-sobreNosotros img{
+        width: 350px;
+
+    }
+
+    .container__qrs img{
+        width: 90%;
+    }
+
+    /* Content six -------------------> content__contactanos---*/
+
+    .content__contactanos{
+        padding: 2em 4em;
+    }
+
+    .container__title .title{
+        grid-template-columns: 100%;
+    }
+
+    .formulario{
+        width: 100%;
+
+    }
+
+    .formulario form{
+        width: 100%;
+    }
+
+    
+    /*Content eight ------------------> content__footer--------------> */
+
+    .content__footer{
+        padding: 2em 2em;
+    }
+
+    .logo__footer{
+        margin-bottom: 1em;
+    }
+
+    .logo__footer img{
+        width: 120px;
+    }
+
+    .container__information{
+        margin-bottom: 8em; 
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .content__left-redondar .redondar{
+        margin-bottom: .1em;
+        display: none;
+    }
+
+    .nav-bar-footer ul li{
+        padding: .4em;
+    }
+
+    .content__right-redondar {
+        margin-right: 105px;
+    }
+
+}
+
+@media (max-width: 420px){
+
+
+    /* Content - Principal ------------------>*/
+
+    .content__first{
+        height: auto;
+        width: 100%;
+        padding: 4em 2em;
+    }
+
+    .container__left{
+        margin-bottom: 8em;
+        width: 100%;
+    }
+
+    .container__right{
+        padding: 2em;
+    }
+   
+    .container__right .container__img img{
+        width: 300px;
+    }
+
+    /* Content -- secundaria -------------------->*/
+
+    .content__services{
+        height: auto;
+    }
+
+    .container__title .title{
+        grid-template-columns: 100%;
+    }
+
+    .container__right-services .container__img img{
+        width: 320px;
+        margin-left: -20px;
+
+    }
+
+     /* Content three ------------------> content __user*/
+
+     .content__user{
+        padding: 6em 4em;
+        grid-template-columns: 100%;
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .container__right-user{
+        margin: 0px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+   
+    /* Content four -------------> content trabajo PIA---->*/
+
+    .carrusel .img{
+        margin-right: 0rem;
+        height: 15rem;
+    }
+
+    
+    /*Content eight ------------------> content__footer--------------> */
+
+    .content__footer{
+        width: 100%;
+        padding: 2em;
+    }
+
+    .container__footer{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+
+    .container__information{
+        margin-bottom: 0px;
+    }
+
+    .container__copy p{
+        margin-left: 8px;
+    }
+
+    .container__right-footer{
+        width: 100%;
+        display: flex;
+        margin-top: 1em;
+    }
+
+}
+
+
+@media (max-width: 320px){
+
+    header{
+        padding: 0;
+    }
+
+    .hamburger{
+        margin-right: 2em;
+        margin-top: -5px;
+    }
+
+    .logo img{
+
+        width: 250px;
+    }
+
+
+    /* Content - Principal ------------------>*/
+
+    .content__first{
+        height: auto;
+    }
+
+    .container__left{
+        margin-bottom: 4em;
+    }
+
+    .container__right{
+        width: 100%;
+    }
+
+    .container__img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container__right .container__img img{
+        width: 300px;
+    }
+
+    /* Content -- secundaria -------------------->*/
+
+    .container__left-services{
+        grid-template-columns: 100%;
+        margin-bottom: 9em;
+    }
+
+    .content__services{
+        padding: 4em 2em;
+    }
+
+
+    /* Content three ------------------> content __user*/
+
+    .content__user{
+        padding: 6em 2em;
+    }
+
+    .container__right-user{
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    /* Content four -------------> content trabajo PIA---->*/
+    .content__trabajo-pia {
+        padding: 3em 2em;
+    }
+    .carrusel .punto{
+
+        margin-right: .1em;
+    }
+
+    /* Content five ---------------------> content__sobre-nosotros*/
+
+    .container__left-sobreNosotros{
+        margin-top: 0em;
+        margin-bottom: 3em;
+        width: 100%;
+
+    }
+
+    .container__right-sobreNosotros img{
+        width: 250px;
+
+    }
+
+    .container__qrs img{
+        width: 100%;
+    }
+
+    /* Content six -------------------> content__contactanos---*/
+
+    .content__contactanos{
+        padding: 2em;
+    }
+
+    /* Content diseño intuitivo*/
+    .content__disenoIntuitivo{
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .container__text{
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    /*Content eight ------------------> content__footer--------------> */
+
+    .content__footer{
+        padding: 2em;
+    }
+
+    .logo__footer{
+        margin-bottom: 1em;
+    }
+
+    .logo__footer img{
+        width: 120px;
+    }
+
+    .container__information{
+        margin-bottom: 8em; 
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .content__left-redondar .redondar{
+        margin-bottom: .1em;
+        display: none;
+    }
+
+    .nav-bar-footer ul li{
+        padding: .2em;
+    }
+
+    .content__right-redondar {
+        margin-right: 110px;
+    }
+
+
+
+}
